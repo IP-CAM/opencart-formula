@@ -1,8 +1,8 @@
 =================
-sugarcrm-formula
+opencart-formula
 =================
 
-A saltstack formula to install and configure SugarCRM, a customer relationship management (CRM) system.
+A saltstack formula to install and configure opencart, a free shopping cart system.
 
 .. note::
 
@@ -15,35 +15,35 @@ Available states
 .. contents::
     :local:
 
-``sugarcrm``
+``opencart``
 -------------
 
-Install and configure sugarcrm sites
+Install and configure opencart sites
 
-``sugarcrm.cli``
+``opencart.cli``
 -------------
 
 Installs sugarcli
 
 
-``sugarcrm.config``
+``opencart.config``
 -------------
 
-Configure sugarcrm sites
+Configure opencart sites
 
 Pillar customizations:
 ======================
 
 .. code-block:: yaml
 
-    sugarcrm:
+    opencart:
         sites:
             sitename:
-              username: <your-sugarcrm-username>
-              password: <your-sugarcrm-user-password>
-              database: <your-sugarcrm-database-name>
-              dbuser: <your-sugarcrm-db-username>
-              dbpass: <your-sugarcrm-db-password>       
+              username: <your-opencart-username>
+              password: <your-opencart-user-password>
+              database: <your-opencart-database-name>
+              dbuser: <your-opencart-db-username>
+              dbpass: <your-opencart-db-password>       
               url: http://example.ie
               title: 'My Blog'
               email: 'john.doe@acme.com'       
