@@ -3,14 +3,6 @@
 include:
   - opencart.cli
 
-{{ map.tmp_dir }}/opencart.zip:
-  file.managed:
-    - source: {{ salt['pillar.get']('opencart:source') }}
-    - source_hash: {{ salt['pillar.get']('opencart:hash') }}
-    - user: {{ map.www_user }}
-    - group: {{ map.www_group }}
-    - mode: 640
-
 {% for id, site in salt['pillar.get']('opencart:sites', {}).items() %}
 {{ map.docroot }}/{{ id }}:
   file.directory:
@@ -20,13 +12,25 @@ include:
     - makedirs: True
 
 {% if site.get('source') %}
-/tmp/opencart_{{ id }}.zip:
-  file.managed:
-    - source: {{ site.get('source') }}
-    - source_hash: {{ site.get('hash') }}
+extract_opencart_{{ id }}:
+  archive.extracted:
+    - name: {{ map.docroot }}/{{ id }}
+    - source: {{ salt['pillar.get']('opencart:source') }}
+    - source_hash: {{ salt['pillar.get']('opencart:hash') }}
+    - archive_format: zip
     - user: {{ map.www_user }}
     - group: {{ map.www_group }}
-    - mode: 640
+    - if_missing: {{ map.docroot }}/{{ id }}/
+{% else %}
+extract_opencart_{{ id }}:
+  archive.extracted:
+    - name: {{ map.docroot }}/{{ id }}
+    - source: {{ site.get('source') }}
+    - source_hash: {{ site.get('hash') }}
+    - archive_format: zip
+    - user: {{ map.www_user }}
+    - group: {{ map.www_group }}
+    - if_missing: {{ map.docroot }}/{{ id }}/
 {% endif %}   
 
 # This command tells ocok to install opencart
