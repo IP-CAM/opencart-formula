@@ -1,5 +1,5 @@
 ===========================
-opencart-formula|travis-ci|
+opencart-formula |travis-ci|
 ===========================
 .. |travis-ci| image:: https://travis-ci.org/fintanmm/opencart-formula.svg?branch=master
     :target: https://travis-ci.org/fintanmm/opencart-formula
