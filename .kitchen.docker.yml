@@ -162,6 +162,7 @@ suites:
             - apache
             - apache.config
             - apache.vhosts.standard
+            - php.composer
             - php.ng
             - php.ng.mysql
             - mysql
