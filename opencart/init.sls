@@ -41,8 +41,4 @@ install_{{ id }}:
   - user: {{ map.www_user }}
   - unless: test -f {{ map.docroot }}/{{ id }}/config.php
 
-
-{{ map.docroot }}/{{ id }}/config_si.php:
-  file.symlink:
-    - target: /etc/opencart/{{id}}_config_si.php
 {% endfor %}
