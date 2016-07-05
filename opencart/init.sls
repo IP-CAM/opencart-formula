@@ -11,7 +11,6 @@ include:
     - group: {{ map.www_group }}
     - mode: 640
 
-
 {% for id, site in salt['pillar.get']('opencart:sites', {}).items() %}
 {{ map.docroot }}/{{ id }}:
   file.directory:
@@ -49,17 +48,14 @@ include:
         license: "{{ site.get('license', '') }}"
         title: "{{ site.get('title', '') }}"
 
-# This command tells sugarcli to install opencart
+# This command tells ocok to install opencart
 install_{{ id }}:
  cmd.run:
   - cwd: {{ map.docroot }}/{{ id }}
-{% if site.get('source') %}  
-  - name: '/usr/local/bin/sugarcli install:run -p {{ map.docroot }}/{{ id }} -u {{ site.get('url') }} -s {{ map.tmp_dir }}/opencart_{{ id }}.zip -c /etc/opencart/{{ id }}_config_si.php'
-{% else %}  
-  - name: '/usr/local/bin/sugarcli install:run -p {{ map.docroot }}/{{ id }} -u {{ site.get('url') }} -s {{ map.tmp_dir }}/opencart.zip -c /etc/opencart/{{ id }}_config_si.php'
-{% endif %}   
+  - name: 'ocok install -d {{ site.get('dbdriver') }} -o {{ site.get('dbhost') }} -u {{ site.get('dbuser') }} -p {{ site.get('dbpass') }} -b {{ site.get('database') }} -U {{ site.get('username') }} -P {{ site.get('password') }} -e {{ site.get('email') }} -s {{ site.get('url') }}'
   - user: {{ map.www_user }}
-  - unless: /usr/local/bin/sugarcli install:check -p {{ map.docroot }}/{{ id }} 
+  - unless: test -f {{ map.docroot }}/{{ id }}/config.php
+
 
 {{ map.docroot }}/{{ id }}/config_si.php:
   file.symlink:
