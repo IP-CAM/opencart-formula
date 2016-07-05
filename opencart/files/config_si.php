@@ -1,73 +1,29 @@
 <?php
 
-// Database configuration
-$sugar_config_si['setup_db_sugarsales_user'] = '{{ dbuser }}';
-$sugar_config_si['setup_db_sugarsales_password'] = '{{ dbpass }}';
-$sugar_config_si['setup_db_database_name'] = '{{ database }}';
-$sugar_config_si['setup_db_host_name'] = '{{ dbhost }}';
+// HTTP
+define('HTTP_SERVER', '{{ url }}');
 
-// Elastic search configuration
-$sugar_config_si['setup_fts_type'] = 'Elastic';
-$sugar_config_si['setup_fts_host'] = 'localhost';
-$sugar_config_si['setup_fts_port'] = '9200';
+// HTTPS
+define('HTTPS_SERVER', '{{ url }}');
+define('HTTPS_IMAGE', '{{ url }}');
+// DIR
+define('DIR_APPLICATION', '{{ path }}/public/catalog/');
+define('DIR_SYSTEM', '{{ path }}/public/system/');
+define('DIR_LANGUAGE', '{{ path }}/public/catalog/language/');
+define('DIR_TEMPLATE', '{{ path }}/public/catalog/view/theme/');
+define('DIR_CONFIG', '{{ path }}/public/system/config/');
+define('DIR_IMAGE', '{{ path }}/public/image/');
+define('DIR_CACHE', '{{ path }}/public/system/storage/cache/');
+define('DIR_DOWNLOAD', '{{ path }}/public/system/storage/download/');
+define('DIR_LOGS', '{{ path }}/public/system/storage/logs/');
+define('DIR_MODIFICATION', '{{ path }}/public/system/storage/modification/');
+define('DIR_UPLOAD', '{{ path }}/public/system/storage/upload/');
 
-// Sugar Config
-$sugar_config_si['setup_site_url'] = '{{ url }}';
-$sugar_config_si['setup_site_admin_user_name'] = '{{ username }}';
-$sugar_config_si['setup_site_admin_password'] = '{{ password }}';
-$sugar_config_si['setup_license_key'] = '{{ license }}';
-
-// Install demo data <yes|no>
-$sugar_config_si['demoData'] = 'no';
-
-// Default system configuration
-$sugar_config_si['setup_system_name'] = '{{ title }}';
-// English (US)
-$sugar_config_si['default_language'] = 'en_us';
-$sugar_config_si['default_locale_name_format'] = 's f l';
-
-$sugar_config_si['default_currency_iso4217'] = 'USD';
-$sugar_config_si['default_currency_name'] = 'US Dollar';
-$sugar_config_si['default_currency_symbol'] = '$';
-$sugar_config_si['default_currency_significant_digits'] = '2';
-
-$sugar_config_si['default_decimal_seperator'] = '.';
-$sugar_config_si['default_number_grouping_seperator'] = ',';
-
-$sugar_config_si['default_date_format'] = 'm/d/Y';
-$sugar_config_si['default_time_format'] = 'h:ia';
-
-$sugar_config_si['default_export_charset'] = 'UTF-8';
-$sugar_config_si['export_delimiter'] = ',';
-
-/* French configuration */
-// $sugar_config_si['default_language'] = 'fr_FR';
-// $sugar_config_si['default_locale_name_format'] = 's f l';
-//
-// $sugar_config_si['default_currency_iso4217'] = 'EUR';
-// $sugar_config_si['default_currency_name'] = 'Euro';
-// $sugar_config_si['default_currency_symbol'] = '€';
-// $sugar_config_si['default_currency_significant_digits'] = '2';
-//
-// $sugar_config_si['default_decimal_seperator'] = ',';
-// $sugar_config_si['default_number_grouping_seperator'] = ',';
-//
-// $sugar_config_si['default_date_format'] = 'd/m/Y';
-// $sugar_config_si['default_time_format'] = 'H:i';
-//
-// $sugar_config_si['default_export_charset'] = 'UTF-8';
-// $sugar_config_si['export_delimiter'] = ',';
-
-
-// Advanced configuration
-$sugar_config_si['setup_db_type'] = 'mysql';
-$sugar_config_si['setup_db_pop_demo_data'] = false;
-
-$sugar_config_si['setup_db_create_database'] = 1;
-$sugar_config_si['setup_db_create_sugarsales_user'] = false;
-$sugar_config_si['setup_db_drop_tables'] = 0;
-$sugar_config_si['setup_db_username_is_privileged'] = true;
-$sugar_config_si['setup_db_admin_user_name'] = $sugar_config_si['setup_db_sugarsales_user'];
-$sugar_config_si['setup_db_admin_password'] = $sugar_config_si['setup_db_sugarsales_password'];
-
-$sugar_config_si['setup_site_sugarbeet_automatic_checks'] = true;
+// DB
+define('DB_DRIVER', '{{ dbdriver }}');
+define('DB_HOSTNAME', '{{ dbhost }}');
+define('DB_USERNAME', '{{ dbuser }}');
+define('DB_PASSWORD', '{{ dbpass }}');
+define('DB_DATABASE', '{{ database }}');
+define('DB_PORT', '{{ dbport }}');
+define('DB_PREFIX', '{{ dbprefix }}');
