@@ -46,8 +46,9 @@ Pillar customizations:
               database: <your-opencart-database-name>
               dbuser: <your-opencart-db-username>
               dbpass: <your-opencart-db-password>       
+              dbdriver: 'mpdo'
+              dbport: '3306'
               url: http://example.ie
-              title: 'My Blog'
               email: 'john.doe@acme.com'       
 
 Formula Dependencies
