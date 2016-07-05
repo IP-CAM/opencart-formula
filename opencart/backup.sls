@@ -1,7 +1,7 @@
 {% from "opencart/map.jinja" import map with context %}
 {% for site in pillar['opencart']['sites'] %}
 
-{% if site.get('backup') %}
+{% if site.get('backup') == true %}
 # This command tells ocok to backup opencart
 backup_{{ id }}:
  cmd.run:

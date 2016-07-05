@@ -16,6 +16,7 @@ opencart:
             dbport: 3306
             url: http://siteA.com
             email: siteA@email.com
+            backup: true
         sitenameB.com:
             username: siteBuser
             password: siteBpass

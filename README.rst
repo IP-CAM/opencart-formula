@@ -27,11 +27,15 @@ Install and configure opencart sites
 
 Installs sugarcli
 
-
 ``opencart.config``
 -------------
 
 Configure opencart sites
+
+``opencart.backup``
+-------------
+
+Backup opencart sites
 
 Pillar customizations:
 ======================
@@ -49,7 +53,8 @@ Pillar customizations:
               dbdriver: 'mpdo'
               dbport: '3306'
               url: http://example.ie
-              email: 'john.doe@acme.com'       
+              email: 'john.doe@acme.com'
+              backup: true      
 
 Formula Dependencies
 ====================
