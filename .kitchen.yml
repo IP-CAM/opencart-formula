@@ -1,18 +1,11 @@
 ---
 driver:
   name: vagrant
-  # name: docker
-  # binary: /usr/bin/docker
-  # use_sudo: false
-  # remove_images: true
-  # build_context: '.'
 
 platforms:
   - name: debian-jessie64
-  # - name: ubuntu-14.04-minimal
     driver_config:
       box: ssplatt/salt-deb-8
-      # box: saltstack/ubuntu-14.04-minimal
 
 provisioner:
   name: salt_solo
@@ -132,7 +125,7 @@ provisioner:
         hash: 'sha512=de9feeb2839ae86a01d5d5aa73df94e3cf49b028f63cd14bb5dc39212382da04e1f24677e1ac1c18d6ea1ee41f248477b2bbfd8151baaef5fa1e2c84a8779053'
           cli:
               source: http://beyond-it.github.io/ocok/ocok.phar
-              hash:  sha512=
+              hash: 'sha512='
           sites:
               sitenameA.com:
                   username: siteAuser
