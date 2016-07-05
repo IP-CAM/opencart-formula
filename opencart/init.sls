@@ -3,18 +3,6 @@
 include:
   - opencart.cli
 
-/etc/opencart:
-  file.directory:
-    - user: {{ map.www_user }}
-    - group: {{ map.www_group }}
-    - dir_mode: 750
-    - file_mode: 640
-    - recurse:
-      - user
-      - group
-      - mode
-    - makedirs: True
-
 {{ map.tmp_dir }}/opencart.zip:
   file.managed:
     - source: {{ salt['pillar.get']('opencart:source') }}
