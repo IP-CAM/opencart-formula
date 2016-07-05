@@ -1,0 +1,15 @@
+rvm: 2.2
+
+sudo: required
+services: docker
+
+env:
+  matrix:
+  - INSTANCE=ubuntu-14.04-minimal
+
+# https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
+before_script: sudo iptables -L DOCKER || sudo iptables -N DOCKER
+
+script:
+# Run test-kitchen with docker driver, for example:
+- KITCHEN_LOCAL_YAML=.kitchen.docker.yml kitchen verify ${INSTANCE}
