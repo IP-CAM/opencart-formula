@@ -3,11 +3,11 @@ require "serverspec"
 # Set backend type
 set :backend, :exec
 
-describe 'sugarcrm cli tool' do
+describe 'opencart cli tool' do
 
-    sugarcli = '/usr/local/bin/sugarcli'
+    ocok = '/usr/local/bin/ocok'
 
-    describe file(sugarcli) do
+    describe file(ocok) do
         it { should exist }
         it { should be_mode 740 }
         it { should be_owned_by 'www-data' }

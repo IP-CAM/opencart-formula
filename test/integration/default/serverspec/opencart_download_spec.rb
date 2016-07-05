@@ -3,11 +3,11 @@ require "serverspec"
 # Set backend type
 set :backend, :exec
 
-describe 'sugarcrm archive download' do
+describe 'opencart archive download' do
 
-    sugarcrm_zip = '/tmp/sugarcrm.zip'
+    opencart_zip = '/tmp/opencart.zip'
 
-    describe file(sugarcrm_zip) do
+    describe file(opencart_zip) do
         it { should exist }
         it { should be_mode 640 }
         it { should be_owned_by 'www-data' }
@@ -15,11 +15,11 @@ describe 'sugarcrm archive download' do
     end
 end
 
-describe 'sugarcrm custom archive download' do
+describe 'opencart custom archive download' do
 
-    sugarcrm_zip = '/tmp/sugarcrm_sitenameB.com.zip'
+    opencart_zip = '/tmp/opencart_sitenameB.com.zip'
 
-    describe file(sugarcrm_zip) do
+    describe file(opencart_zip) do
         it { should exist }
         it { should be_mode 640 }
         it { should be_owned_by 'www-data' }
