@@ -1,9 +1,9 @@
-sugarcrm:
-    source: http://tenet.dl.sourceforge.net/project/sugarcrm/1%20-%20SugarCRM%206.5.X/SugarCommunityEdition-6.5.X/SugarCE-6.5.23.zip
-    hash: 'sha512=5bb4be27a1cabe8e0b3e20698a12ac52e15159077a73295e6170a30e8ff5f31c7a395797c2812936ad721b9472d19570c20c092c1a43f3954cd2c2149fb7ec44'
+opencart:
+    source: https://github.com/opencart/opencart/releases/download/2.2.0.0/2.2.0.0-compiled.zip
+    hash: 'sha512=de9feeb2839ae86a01d5d5aa73df94e3cf49b028f63cd14bb5dc39212382da04e1f24677e1ac1c18d6ea1ee41f248477b2bbfd8151baaef5fa1e2c84a8779053'
     cli:
-        source: http://apt.inetprocess.fr/pub/sugarcli.phar
-        hash:  'sha512=56d829892b3ddf742aad20b6582322c8894b6bbb81a1684adde268a0a32d61885bdcbe1dd7fd9a8227e94ed8b154e80d7154a72fd69cf41a287b0b72e793ea99'
+        source: http://beyond-it.github.io/ocok/ocok.phar
+        hash:  'sha512='
     sites:
         sitenameA.com:
             username: siteAuser
@@ -25,5 +25,5 @@ sugarcrm:
             url: http://siteB.com
             title: 'siteB title'
             email: siteB@email.com
-            source: http://tenet.dl.sourceforge.net/project/sugarcrm/1%20-%20SugarCRM%206.5.X/SugarCommunityEdition-6.5.X/SugarCE-6.5.23.zip
-            hash: 'sha512=5bb4be27a1cabe8e0b3e20698a12ac52e15159077a73295e6170a30e8ff5f31c7a395797c2812936ad721b9472d19570c20c092c1a43f3954cd2c2149fb7ec44'            
+            source: https://github.com/opencart/opencart/releases/download/2.2.0.0/2.2.0.0-compiled.zip
+            hash: 'sha512=de9feeb2839ae86a01d5d5aa73df94e3cf49b028f63cd14bb5dc39212382da04e1f24677e1ac1c18d6ea1ee41f248477b2bbfd8151baaef5fa1e2c84a8779053'          
