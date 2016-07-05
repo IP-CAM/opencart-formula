@@ -135,6 +135,7 @@ provisioner:
                   dbuser: siteAdbuser
                   dbpass: siteAdbpass
                   dbdriver: mysqli
+                  dbport: 3306
                   url: http://siteA.com
                   email: siteA@email.com
               sitenameB.com:
@@ -145,6 +146,7 @@ provisioner:
                   dbuser: siteBdbuser
                   dbpass: siteBdbpass
                   dbdriver: mysqli
+                  dbport: 3306
                   url: http://siteB.com
                   email: siteB@email.com
                   source: 'https://github.com/opencart/opencart/releases/download/2.2.0.0/2.2.0.0-compiled.zip'
