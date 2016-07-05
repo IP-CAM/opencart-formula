@@ -1,11 +1,15 @@
 ---
 driver:
-  name: vagrant
+  name: docker
+  binary: /usr/bin/docker
+  use_sudo: false
+  remove_images: true
+  build_context: '.'
 
 platforms:
-  - name: debian-jessie64
+  - name: ubuntu-14.04-minimal
     driver_config:
-      box: ssplatt/salt-deb-8
+      box: saltstack/ubuntu-14.04-minimal
 
 provisioner:
   name: salt_solo
