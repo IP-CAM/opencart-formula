@@ -1,7 +1,9 @@
-=================
-opencart-formula
-=================
-
+===========================
+opencart-formula|travis-ci|
+===========================
+.. |travis-ci| image:: https://travis-ci.org/fintanmm/opencart-formula.svg?branch=master
+    :target: https://travis-ci.org/fintanmm/opencart-formula
+    
 A saltstack formula to install and configure opencart, a free shopping cart system.
 
 .. note::
