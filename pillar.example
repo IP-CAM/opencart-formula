@@ -12,8 +12,8 @@ opencart:
             dbhost: localhost
             dbuser: siteAdbuser
             dbpass: siteAdbpass
+            dbdriver: mysqli
             url: http://siteA.com
-            title: 'siteA title'
             email: siteA@email.com
         sitenameB.com:
             username: siteBuser
@@ -22,8 +22,8 @@ opencart:
             dbhost: localhost
             dbuser: siteBdbuser
             dbpass: siteBdbpass
+            dbdriver: mysqli
             url: http://siteB.com
-            title: 'siteB title'
             email: siteB@email.com
             source: https://github.com/opencart/opencart/releases/download/2.2.0.0/2.2.0.0-compiled.zip
             hash: 'sha512=de9feeb2839ae86a01d5d5aa73df94e3cf49b028f63cd14bb5dc39212382da04e1f24677e1ac1c18d6ea1ee41f248477b2bbfd8151baaef5fa1e2c84a8779053'          

@@ -29,25 +29,6 @@ include:
     - mode: 640
 {% endif %}   
 
-{{ id }}_config:
-  file.managed:
-    - name: /etc/opencart/{{ id }}_config_si.php
-    - source: salt://opencart/files/config_si.php
-    - user: {{ map.www_user}}
-    - group: {{ map.www_group }}
-    - mode: 640
-    - template: jinja
-    - defaults:
-        dbuser: "{{ site.get('dbuser') }}"
-        dbpass: "{{ site.get('dbpass') }}"
-        database: "{{ site.get('database') }}"
-        dbhost: "{{ site.get('dbhost') }}"        
-        url: "{{ site.get('url') }}"
-        username: "{{ site.get('username') }}"
-        password: "{{ site.get('password') }}"
-        license: "{{ site.get('license', '') }}"
-        title: "{{ site.get('title', '') }}"
-
 # This command tells ocok to install opencart
 install_{{ id }}:
  cmd.run:
